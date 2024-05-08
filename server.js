@@ -17,9 +17,11 @@ app.use(express.json())
 app.use(cookieParser());
 
 app.use(cors({
-    origin:process.env.FRONTEND_URL,
-    method:["GET","POST","PUT","DELETE"],
-}))
+    origin: '*', // Allows requests from any origin
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true, // If using authentication, this should be adjusted
+}));
+
 
 // const corsOptions = {
 //     origin: 'http://localhost:5174'
