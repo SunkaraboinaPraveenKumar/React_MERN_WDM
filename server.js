@@ -6,6 +6,9 @@ import blogRouter from './routes/blog.js';
 import {config}  from 'dotenv';
 import cors from 'cors';
 
+config({
+    path:'./data/config.env'
+})
 
 const app=express();
 
@@ -25,9 +28,6 @@ app.use(cors({
   
 //   app.use(cors(corsOptions));  
 
-config({
-    path:'./data/config.env'
-})
 
 mongoose.connect(process.env.MONGO_URL,
     {
