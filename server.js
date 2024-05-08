@@ -16,15 +16,14 @@ app.use(cookieParser());
 app.use(cors({
     origin:process.env.FRONTEND_URL,
     method:["GET","POST","PUT","DELETE"],
-    credentials:true
 }))
 
-const corsOptions = {
-    origin: 'http://localhost:5174'
-    // Only allow requests from this origin
-  };
+// const corsOptions = {
+//     origin: 'http://localhost:5174'
+//     // Only allow requests from this origin
+//   };
   
-  app.use(cors(corsOptions));  
+//   app.use(cors(corsOptions));  
 
 config({
     path:'./data/config.env'
