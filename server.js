@@ -20,7 +20,7 @@ app.use(cors({
 }))
 
 const corsOptions = {
-    origin: 'http://localhost:5173', 
+    origin: 'http://localhost:5174', 
     credentials:true
     // Only allow requests from this origin
   };
