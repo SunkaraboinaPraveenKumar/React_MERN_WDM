@@ -17,7 +17,7 @@ app.use(express.json())
 app.use(cookieParser());
 
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://localhost:5174'], // Allows requests from any origin
+    origin: ['http://localhost:5173', 'http://localhost:5174','https://mern-2024-front-end-vert.vercel.app'], // Allows requests from any origin
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true, // If using authentication, this should be adjusted
 }));
