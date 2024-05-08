@@ -19,6 +19,12 @@ app.use(cors({
     credentials:true
 }))
 
+const corsOptions = {
+    origin: 'http://localhost:5173', // Only allow requests from this origin
+  };
+  
+  app.use(cors(corsOptions));  
+
 config({
     path:'./data/config.env'
 })
