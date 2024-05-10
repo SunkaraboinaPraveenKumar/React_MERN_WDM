@@ -44,4 +44,7 @@ app.use('/api/users',userRouter);
 app.use('/api/blogs',blogRouter);
 
 
-app.listen(process.env.PORT,()=>console.log(`The Server is a Running on port ${process.env.PORT}`))
+const port = process.env.PORT || 3000;
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Server running on port ${port}`);
+});
